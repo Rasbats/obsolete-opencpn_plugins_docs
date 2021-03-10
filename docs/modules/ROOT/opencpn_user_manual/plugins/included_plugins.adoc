@@ -1,0 +1,24 @@
+indexmenu_n_4
+
+== Included
+
+These are the Plugins included with the standard download.
+
+link:install_and_enable.html[Install and Enable] Plugins +
+General Information about plugins.
+
+=== Plugins included in OpenCPN
+
+link:included_plugins/dashboard.html[Dashboard] Plugin +
+Plugin to display navigation data. Included in the OpenCPN installation.
+
+link:included_plugins/grib_weather.html[Grib Weather] Plugin +
+Plugin to display Grib weather data files. Included in the OpenCPN
+installation.
+
+link:included_plugins/wmm.html[WMM] Plugin +
+A plugin to display the magnetic variation, based on the World Magnetic
+Model.
+
+link:../charts/chart_downloader_tab.html[Chart Downloader] +
+Manager for chart downloads.

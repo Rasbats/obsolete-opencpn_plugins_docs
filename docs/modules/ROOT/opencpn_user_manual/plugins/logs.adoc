@@ -1,0 +1,26 @@
+indexmenu_n_8
+
+== Logs
+
+*link:logs/dash-t.html[Dashboard-Tactics]* +
+Joins Tactics & Dashboard, thoroughly tested with greater accuracy,
+better graphic history instruments, SignalK and InfluxDB. Show SignalK
+data directly, including Engine information.
+
+*link:logs/logbook.html[Logbook]* +
+Plugin for creating and maintaining many types of logs for your boat.
+
+*link:logs/find-it.html[Find-It]* +
+A stowage Manager
+
+*link:logs/vdr.html[VDR]* Voyage Data Recorder. +
+Plugin to record and play NMEA data files. Allows simulation of AIS. See
+link:../../developer_manual/plugins/beta_plugins/vdrplus.html[vdrPlus
+(Beta)]
+
+*link:logs/nmea_converter.html[NMEA Converter]* +
+Useful plugin to convert incoming NMEA Sentences
+
+*link:../../developer_manual/plugins/beta_plugins/obabel.html[oBabel
+(Beta)]* +
+Uses GPSBabel to transfer waypoints and routes to a Garmin chartplotter
