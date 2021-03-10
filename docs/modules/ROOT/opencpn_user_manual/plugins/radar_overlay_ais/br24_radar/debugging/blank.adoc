@@ -1,3 +1,0 @@
-This page is intentionally left blank. It has been created to force the
-page one level up to become a namespace so that indexmenu will sort
-using the \{\{indexmenu_N>xx code}} at the head of each page.

@@ -1,3 +1,0 @@
-indexmenu_n_9
-
-== Nmea 0183 Sentences
