@@ -5,7 +5,7 @@ content:
   sources:
    - url: .
      branches: HEAD
-   - url: https://github.com/Rasbats/opencpn_plugins_docs
+   - url: https://github.com/Rasbats/opencpn_plugins_docs/rawhide
      #https://pagure.io/fedora-docs/release-docs-home.git
      branches: master
 ui:
