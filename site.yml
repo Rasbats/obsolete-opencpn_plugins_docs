@@ -1,11 +1,12 @@
 site:
   title: Local Preview
-  start_page: fedora:install-guide:index
+  start_page: OpenCPN:user-guide:index
 content:
   sources:
    - url: .
      branches: HEAD
-   - url: https://pagure.io/fedora-docs/release-docs-home.git
+   - url: https://github.com/Rasbats/opencpn_plugins_docs
+     #https://pagure.io/fedora-docs/release-docs-home.git
      branches: master
 ui:
   bundle:
