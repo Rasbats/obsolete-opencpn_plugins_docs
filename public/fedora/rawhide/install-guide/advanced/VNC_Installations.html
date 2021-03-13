@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installing Using VNC :: Local Preview</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar" style="">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">
+        <img src="../../../../_/img/docs_logo.png" style="height:40px">
+      </a>
+      <!-- We don't have anything in the menu, but the burger still appears
+           on mobile devices. So let's remove it. -->
+      <!--<button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>-->
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="fedora" data-version="rawhide">
+  <aside class="navigation" role="navigation">
+    <div class="panels">
+<div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Fedora User Docs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../index.html">OpenCPN Plugins by Category</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../other.html">Other</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../sailing.html">Sailing</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Fedora User Docs</span>
+    <span class="version">rawhide</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Fedora User Docs</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">rawhide</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+  <main class="main" role="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+<nav class="crumbs" role="navigation" aria-label="breadcrumbs">
+  
+  <ul>
+      <li class="crumb HO"><a href="../index.html">Home</a></li>
+    <li class="crumb HO"><a href="../../index.html">Fedora User Docs</a></li>
+    <li class="crumb HA"><a href="VNC_Installations.html">Installing Using VNC</a></li>
+  </ul>
+  
+</nav>
+  <div class="edit-this-page"><a href="https://pagure.io/fedora-docs/install-guide/blob/master/f/modules/install-guide/pages/advanced/VNC_Installations.adoc">Edit this Page</a></div>
+</div>
+<article class="doc">
+<h1>Installing Using VNC</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The graphical installation interface is the recommended method of installing Fedora. However, in some cases, accessing the graphical interface directly is difficult or impossible. Some systems lack the capability to connect a display and a keyboard, making VNC a necessity for manual (non-Kickstart) installations.</p>
+</div>
+<div class="paragraph">
+<p>To allow manual installations on <em>headless systems</em> (systems without a directly connected display, keyboard and mouse), the <strong class="application">Anaconda</strong> installation program includes a <em>Virtual Network Computing</em> (VNC) mode which allows the graphical mode of the installation program to run locally, but display on another system connected to the network. The VNC installation provides you with the full range of installation options.</p>
+</div>
+<div class="paragraph">
+<p>This chapter provides instructions on activating VNC mode on the installation system and connecting to it using a VNC viewer.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sect-vnc-installations-viewer"><a class="anchor" href="#sect-vnc-installations-viewer"></a>Installing a VNC Viewer</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Performing a VNC installation requires a VNC viewer running on your workstation or another terminal computer. VNC viewers are available in the repositories of most Linux distributions; free VNC viewers are also available for other operating systems such as Windows. On Linux systems, use your package manager to search for a viewer for your distribution.</p>
+</div>
+<div class="paragraph">
+<p>The following VNC viewers are available in Fedora:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong class="application">TigerVNC</strong> - A basic viewer independent of your desktop environment. Installed as the <strong class="package">tigervnc</strong> package.</p>
+</li>
+<li>
+<p><strong class="application">Vinagre</strong> - A viewer for the <strong class="application">GNOME</strong> desktop environment. Installed as the <strong class="package">vinagre</strong> package.</p>
+</li>
+<li>
+<p><strong class="application">KRDC</strong> - A viewer integrated with the <strong class="application">KDE</strong> desktop environment. Installed as the <strong class="package">kdenetwork-krdc</strong> package.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To install any of the viewers listed above, execute the following command as <code>root</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># dnf install package</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Replace <em>package</em> with the package name of the viewer you want to use (for example, <strong class="package">tigervnc</strong>).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Procedures in this chapter assume you are using <strong class="application">TigerVNC</strong> as your VNC viewer. Specific instructions for other viewers may differ, but the general principles still apply.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sect-vnc-installations-anaconda-modes"><a class="anchor" href="#sect-vnc-installations-anaconda-modes"></a>Performing a VNC Installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong class="application">Anaconda</strong> installation program offers two modes for VNC installation: <em>Direct mode</em> and <em>Connect mode</em>. The modes differ in the way the connection between the server and viewer is established. After you successfully connect, the installation will progress the same way regardless of the mode you used.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Direct Mode</dt>
+<dd>
+<p>In this mode, <strong class="application">Anaconda</strong> is configured to start the installation and wait for an incoming connection from VNC viewer before proceeding. While waiting for an incoming connection, the system&#8217;s IP address and the port on which the installer expects the connection is displayed on the display or console if available; this implies that you need at least a serial console to connect using this mode, but you can work around this limitation if you know the default VNC port and the system&#8217;s IP address.</p>
+</dd>
+<dt class="hdlist1">Connect Mode</dt>
+<dd>
+<p>In this mode, the VNC viewer is started on the remote system in <em>listening mode</em>. The VNC viewer waits for an incoming connection on a specified port. Then, <strong class="application">Anaconda</strong> is started and the host name/IP address and port number of the viewer are provided using a boot option or a Kickstart command. When the installation begins, the installation program establishes a connection with the listening VNC viewer using the specified host name/IP address and port number. Connect mode is therefore easier to use on systems with no local display or console, but it also may require additional preparation, because the viewer system must be able to accept incoming connections on the specified port, which usually requires changing firewall settings.</p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="sect-vnc-installations-choosing-mode"><a class="anchor" href="#sect-vnc-installations-choosing-mode"></a>Choosing a VNC Installation Mode</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Visual and Interactive access to the system</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If visual and interactive access to the system being installed is not available, then you should use Connect Mode.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Network Connection Rules and Firewalls</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If the system being installed is not allowed inbound connections by a firewall, then you must use Connect Mode or disable the firewall. Disabling a firewall may have security implications.</p>
+</li>
+<li>
+<p>If the remote system running the VNC viewer is not allowed incoming connections by a firewall, then you must use Direct Mode, or disable the firewall. Disabling a firewall may have security implications.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sect-vnc-installations-direct-mode"><a class="anchor" href="#sect-vnc-installations-direct-mode"></a>Installing in VNC Direct Mode</h3>
+<div class="paragraph">
+<p>VNC Direct Mode is when the VNC viewer initiates a connection to the system being installed. <strong class="application">Anaconda</strong> will tell you when to initiate this connection.</p>
+</div>
+<div id="proc-vnc-installations-direct-mode" class="olist arabic">
+<div class="title">Starting VNC in Direct Mode</div>
+<ol class="arabic">
+<li>
+<p>Open the VNC viewer (for example, <strong class="application">TigerVNC</strong>) on the workstation you will be using to connect to the system being installed. A window similar to <a href="#figu-vnc-installations-connection-details">TigerVNC Connection Details</a> will be displayed with an input field allowing you to specify an IP address.</p>
+<div id="figu-vnc-installations-connection-details" class="imageblock">
+<div class="content">
+<img src="../_images/vnc/connection-details.png" alt="TigerVNC after startup" width="showing the Connection Details dialog">
+</div>
+<div class="title">Figure 1. TigerVNC Connection Details</div>
+</div>
+</li>
+<li>
+<p>Boot the installation system and wait for the boot menu to appear. In the menu, edit boot options (see <a href="../install/Booting_the_Installation.html#sect-boot-menu" class="page">The Boot Menu</a>) and append the <span class="option">inst.vnc</span> option to the end of the command line.</p>
+<div class="paragraph">
+<p>Optionally, if you want to restrict VNC access to the installation system, add the <span class="option">inst.vncpassword=<em>PASSWORD</em></span> boot option as well. Replace <em>PASSWORD</em> with the password you want to use for the installation. The VNC password must be between 6 and 8 characters long.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Use a temporary password for the <span class="option">inst.vncpassword=</span> option. It should not be a real or root password you use on any system.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="figu-vnc-installations-boot-options" class="imageblock">
+<div class="content">
+<img src="../_images/boot/vnc-options.png" alt="Editing boot options to activate VNC">
+</div>
+<div class="title">Figure 2. Adding VNC Boot Options</div>
+</div>
+</li>
+<li>
+<p>Start the installation using the edited options. The system will initialize the installation program and start the necessary services. When the system is ready, you will see a message on the screen similar to the following:</p>
+<div class="listingblock">
+<div class="content">
+<pre><code>13:14:47 Please manually connect your VNC viewer to 192.168.100.131:5901 to begin the install.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note the IP address and port number (in the above example, <code>192.168.100.131:5901</code>).</p>
+</div>
+</li>
+<li>
+<p>On the system running the VNC Viewer, enter the IP address and port number obtained in the previous step into the <code>Connection Details</code> dialog in the same format as it was displayed on the screen by the installer. Then, click <code>Connect</code>. The VNC viewer will now connect to the installation system. If you set up a VNC password, enter it when prompted and press <code>OK</code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>When the connection is successfully established, a new window will open on the system running the VNC viewer, displaying the installation menu. This window will provide full remote access to the installer until the installation finishes and the system reboots for the first time.</p>
+</div>
+<div class="paragraph">
+<p>You can then proceed with <a href="../install/Installing_Using_Anaconda.html#chap-installing-using-anaconda" class="page">Installing Using Anaconda</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sect-vnc-installations-connect-mode"><a class="anchor" href="#sect-vnc-installations-connect-mode"></a>Installing in VNC Connect Mode</h3>
+<div class="paragraph">
+<p>VNC connect mode is when the system being installed initiates a connection to the VNC viewer running on a remote system. Before you start, make sure the remote system is configured to accept incoming connection on the port you want to use for VNC. The exact way to make sure the connection will not be blocked depends on your network and on your workstation&#8217;s configuration. Information about configuring the firewall in Fedora is available in the <em class="citetitle">Fedora Security&#160;Guide</em>, available at <a href="https://docs.fedoraproject.org/" class="bare">https://docs.fedoraproject.org/</a>.</p>
+</div>
+<div id="proc-vnc-installations-connect-mode" class="olist arabic">
+<div class="title">Starting VNC in Connect Mode</div>
+<ol class="arabic">
+<li>
+<p>Start the VNC viewer on the client system in listening mode. For example, on Fedora using <strong class="application">TigerVNC</strong>, execute the following command:</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ <span class="command">vncviewer -listen <em>PORT</em></span></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Replace <em>PORT</em> with the port number you want to use for the connection.</p>
+</div>
+<div class="paragraph">
+<p>The terminal will display a message similar to the following example:</p>
+</div>
+<div id="exam-vnc-connect-mode-listening" class="exampleblock">
+<div class="title">Example 1. TigerVNC Viewer Listening</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>TigerVNC Viewer 64-bit v1.3.0 (20130924)
+Built on Sep 24 2013 at 16:32:56
+Copyright (C) 1999-2011 TigerVNC Team and many others (see README.txt)
+See https://tigervnc.org/ for information on TigerVNC.
+
+Thu Feb 20 15:23:54 2014
+main:        Listening on port 5901</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>When this message is displayed, the VNC viewer is ready and waiting for an incoming connection from the installation system.</p>
+</div>
+</li>
+<li>
+<p>Boot the installation system and wait for the boot menu to appear. In the menu, edit boot options (see <a href="../install/Booting_the_Installation.html#sect-boot-menu" class="page">The Boot Menu</a>) and append the following options to the end of the command line:</p>
+<div class="listingblock">
+<div class="content">
+<pre><span class="option">inst.vnc inst.vncconnect=<em>HOST</em>:<em>PORT</em></span></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Replace <em>HOST</em> with the IP address of the system running the listening VNC viewer, and <em>PORT</em> with the port number that the VNC viewer is listening on.</p>
+</div>
+</li>
+<li>
+<p>Start the installation. The system will initialize the installation program and start the necessary services. Once the initialization is finished, <strong class="application">Anaconda</strong> will attempt to connect to the IP address and port you provided in the previous step.</p>
+<div class="paragraph">
+<p>When the connection is successfully established, a new window will open on the system running the VNC viewer, displaying the installation menu. This window will provide full remote access to the installer until the installation finishes and the system reboots for the first time.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You can then proceed with <a href="../install/Installing_Using_Anaconda.html#chap-installing-using-anaconda" class="page">Installing Using Anaconda</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sect-vnc-kickstart-considerations"><a class="anchor" href="#sect-vnc-kickstart-considerations"></a>Kickstart Considerations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Commands for using a VNC installation are also available in Kickstart installations. Using just the <span class="command">vnc</span> command will set up an installation using Direct Mode. Options are available to set up an installation using Connect Mode. For more information about the <span class="command">vnc</span> command and options used in Kickstart files, see <a href="../appendixes/Kickstart_Syntax_Reference.html#appe-kickstart-syntax-reference" class="page">Kickstart Syntax Reference</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sect-vnc-headless-considerations"><a class="anchor" href="#sect-vnc-headless-considerations"></a>Considerations for Headless Systems</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When installing headless systems, the only choices are an automated Kickstart installation or an interactive VNC installation using connect mode. For more information about automated Kickstart installation, see <a href="../appendixes/Kickstart_Syntax_Reference.html#appe-kickstart-syntax-reference" class="page">Kickstart Syntax Reference</a>. The general process for an interactive VNC installation is described below.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Set up a PXE server that will be used to start the installation. Information about installing and performing basic configurating of a PXE server can be found in <a href="Network_based_Installations.html#chap-pxe-server-setup" class="page">Setting Up an Installation Server</a>.</p>
+</li>
+<li>
+<p>Configure the PXE server to use the boot options for a connect mode VNC installation. For information on these boot options, see <a href="#sect-vnc-installations-connect-mode">Installing in VNC Connect Mode</a>.</p>
+</li>
+<li>
+<p>Follow the procedure for a VNC Installation using connect mode as described in the <a href="#proc-vnc-installations-connect-mode">Starting VNC in Connect Mode</a>. However, when directed to boot the system, boot it from the PXE server.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</article>
+<div id="contributing">
+    <p class="contribute">Want to help? <a href="https://docs.fedoraproject.org/en-US/fedora-docs/contributing/">Learn how to contribute to Fedora Docs.</a></p>
+</div>  </main>
+</div>
+<footer class="footer">
+  <p>All Fedora Documentation content available under <a href="http://creativecommons.org/licenses/by-sa/3.0/legalcode">CC-BY-SA 3.0</a> or, when specifically noted, under another <a href="https://fedoraproject.org/wiki/Licensing:Main">accepted</a> free and open content license.</p>
+  <p>Last build: </p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script src="../../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+  </body>
+</html>

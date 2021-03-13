@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After the Installation :: Local Preview</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar" style="">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">
+        <img src="../../../../_/img/docs_logo.png" style="height:40px">
+      </a>
+      <!-- We don't have anything in the menu, but the burger still appears
+           on mobile devices. So let's remove it. -->
+      <!--<button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>-->
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="fedora" data-version="rawhide">
+  <aside class="navigation" role="navigation">
+    <div class="panels">
+<div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Fedora User Docs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../index.html">OpenCPN Plugins by Category</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../other.html">Other</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../sailing.html">Sailing</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Fedora User Docs</span>
+    <span class="version">rawhide</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Fedora User Docs</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">rawhide</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+  <main class="main" role="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+<nav class="crumbs" role="navigation" aria-label="breadcrumbs">
+  
+  <ul>
+      <li class="crumb HO"><a href="../index.html">Home</a></li>
+    <li class="crumb HO"><a href="../../index.html">Fedora User Docs</a></li>
+    <li class="crumb HA"><a href="After_Installation.html">After the Installation</a></li>
+  </ul>
+  
+</nav>
+  <div class="edit-this-page"><a href="https://pagure.io/fedora-docs/install-guide/blob/master/f/modules/install-guide/pages/install/After_Installation.adoc">Edit this Page</a></div>
+</div>
+<article class="doc">
+<h1>After the Installation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This chapter describes the initial setup tools which open after you finish the installation, reboot the system, and log in for the first time.</p>
+</div>
+<div class="paragraph">
+<p>Two separate configuration tools are part of Fedora. If you installed the <strong class="application">GNOME</strong> desktop environment (the default Fedora environment, installed for example as part of the Fedora Workstation Edition), the <strong class="application">GNOME Initial Setup</strong> utility will open; for all other graphical environments, the <strong class="application">Initial Setup</strong> tool serves the same purpose.</p>
+</div>
+<div class="paragraph">
+<p>Both of these tools will allow you to configure user-specific settings which have not been configured during the installation. Some of the settings are available both in the graphical installer (or as Kickstart commands) as well as in the initial-setup utilities; in that case, they will only be displayed after the first reboot if you skipped them during the installation. This means that, for example, if you configured a user account before the installation finished, you will not be prompted to do so again after the installation completes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sect-initial-setup"><a class="anchor" href="#sect-initial-setup"></a>Initial Setup</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>Initial Setup</code> screen is shown after the installation finishes and the installed system boots for the first time, before the first login, assuming the following conditions have been met:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Your software selection contained a graphical environment (for example, you installed the system using a Fedora Workstation live image).</p>
+</li>
+<li>
+<p>The graphical environment you have installed is <strong>not</strong> <strong class="application">GNOME Desktop Environment</strong> (it provides its own initial setup utility which is described in <a href="#After_Installation.adoc#sect-gnome-initial-setup" class="page unresolved">GNOME Initial Setup</a>).</p>
+</li>
+<li>
+<p>The <strong class="package">initial-setup</strong> package has been installed.</p>
+</li>
+<li>
+<p>You have not configured every screen available in the graphical installer.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/anaconda/InitialSetupHub.png" alt="The main Initial Setup screen. This example shows all options; not all of them may be shown" width="depending on your configuration.">
+</div>
+<div class="title">Figure 1. Initial Setup</div>
+</div>
+<div class="paragraph">
+<p><strong class="application">Initial Setup</strong> allows you to configure several system settings. All of these can also be configured during the installation, but they are not required to finish it. Only the settings which have <strong>not</strong> been configured during the installation will be shown; for example, if you did not create a non-<code>root</code> user account during the installation, <strong class="application">Initial Setup</strong> will start after the first reboot, and you will be able to configure one. If you configured all available options during the instalaltion, <strong class="application">Initial Setup</strong> will not be displayed at all.</p>
+</div>
+<div class="paragraph">
+<p>To configure any aspect of the system available in the utility, click any of the links available in the main window (for example, <code>Create User</code>). Each link leads to a separate screen with separate options; these screens are the same ones which were available during the graphical installation. If you need help, press <code>Help</code> in the top left corner to open a new window containing directions for that screen.</p>
+</div>
+<div class="paragraph">
+<p>After you finish configuring any screen, press the <code>Done</code> button in the top left corner to return to the main <strong class="application">Initial Setup</strong> menu. After you finish configuring all settings, click <code>Finish Configuration</code> in the bottom right corner to save all configured settings. The configuration utility will close and you will be able to log in to the system.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>It is possible to configure <strong class="application">Initial Setup</strong> to display all available options, even if they have been already configured during the installation. To do so, you must use a Kickstart file at the start of the installation, and this file must contain the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>firstboot --enable --reconfig</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <span class="option">--reconfig</span> option specifies that all options should be displayed. See <a href="../advanced/Kickstart_Installations.html#chap-kickstart-installations" class="page">Automating the Installation with Kickstart</a> for information about Kickstart installations.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Normally, it is not possible to return to <strong class="application">Initial Setup</strong> after you close it and log in to the system. You can make it display again (after the next reboot, before a login prompt is displayed), by executing the following command as <code>root</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># systemctl enable initial-setup-graphical.service</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, reboot your system.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sect-gnome-initial-setup"><a class="anchor" href="#sect-gnome-initial-setup"></a>GNOME Initial Setup</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong class="application">GNOME Initial Setup</strong> utility will be displayed after you log in for the first time with any user account, as long as your first login is in the <strong class="application">GNOME</strong> desktop environment.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/afterinstall/gnome-initial-setup.png" alt="GNOME Initial Setup with language selection displayed.">
+</div>
+<div class="title">Figure 2. GNOME Initial Setup</div>
+</div>
+<div class="paragraph">
+<p>This utility allows you to configure several user-specific settings, such as system language or the default keyboard layout. Use the <code>Next</code> and <code>Previous</code> buttons at the top of the window to navigate between screens. Some screens (<code>Configure online accounts</code> in particular) are optional and can be skipped using the <code>Skip</code> button in the top right corner.</p>
+</div>
+<div class="paragraph">
+<p>After you finish configuring all screens, click <code>Start using Fedora</code> to exit the utility. After that, the <code>Getting Started</code> page from GNOME help will be displayed, and you can either browse the help content, or close it and start using your desktop.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sect-common-post-installation-tasks"><a class="anchor" href="#sect-common-post-installation-tasks"></a>Common Post-installation Tasks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After you finish the installation and go through one of the initial setup utilities described above, your system is ready for use. However, other administrative tasks not covered by the installer or the initial setup utilities may still be necessary, depending on how you plan to use your system. The list below describes some of the more common tasks usually performed immediately after a new installation.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Recover a lost <code>root</code> password</dt>
+<dd>
+<p>The <code>root</code> password, which is configured during the installation, is required for accessing the system as the <code>root</code> user. Without this password you will not be able to configure your system or install additional software. If you lost or forgot your <code>root</code> password, you can reset it by following the steps described in <a href="Troubleshooting.html#sect-trouble-after-reset-root-password" class="page">Resetting the Root Password</a>.</p>
+</dd>
+<dt class="hdlist1">Configure the network</dt>
+<dd>
+<p>In most cases, network access is configured during the installation process, either in the <strong class="application">Anaconda</strong> installation program (see <a href="Installing_Using_Anaconda.html#sect-installation-gui-network-configuration" class="page">Network &amp; Hostname</a>) or in a Kickstart file (see <a href="../appendixes/Kickstart_Syntax_Reference.html#sect-kickstart-commands-network" class="page">network (optional) - Configure Network Interfaces</a>). For information on configuring the network after the installation, see the <em class="citetitle">Fedora Networking Guide</em>, available at <a href="https://docs.fedoraproject.org/" class="bare">https://docs.fedoraproject.org/</a>.</p>
+</dd>
+<dt class="hdlist1">Perform an initial system update</dt>
+<dd>
+<p>If you installed Fedora from a full installation ISO image (such as the Workstation live image or full Server DVD), it is recommended to perform an initial system update, because your installation media likely contained older versions of software packages. During the initial update, all installed packages are updated to their latest available versions. Updates to packages provide security fixes, bug fixes and enhancements.</p>
+<div class="paragraph">
+<p>The <strong class="application">DNF</strong> package manager is used for updating installed packages. For more information about updating your system with <strong class="application">DNF</strong>, see the <em class="citetitle">Fedora System Administrator&#8217;s Guide</em>, available at <a href="https://docs.fedoraproject.org/" class="bare">https://docs.fedoraproject.org/</a>.</p>
+</div>
+</dd>
+<dt class="hdlist1">Install driver updates</dt>
+<dd>
+<p>Usually, drivers for system devices are already supported in the kernel provided by Red&#160;Hat Enterprise&#160;Linux. However, occasionally, support for devices that have been released recently could be missing. In these cases, a driver update enabling your device may be available.</p>
+<div class="paragraph">
+<p>Devices necessary to complete the installation can have driver updates provided before the installation begins. If a device is missing a driver, but it is not essential during the installation, it is recommended to wait until after the installation completes, and install additional drivers afterwards. For instructions on installing and enabling additional drivers on the installed system using <strong class="application">RPM</strong> and <strong class="application">DNF</strong>, see the <em class="citetitle">Fedora System Administrator&#8217;s Guide</em>, available at <a href="https://docs.fedoraproject.org/" class="bare">https://docs.fedoraproject.org/</a>.</p>
+</div>
+</dd>
+<dt class="hdlist1">Configure additional repositories</dt>
+<dd>
+<p>New software is installed from <em>package repositories</em>. Package repositories are organized sets of software and metadata that can be accessed by the <strong class="application">DNF</strong> package manager. By default, several update repositories provided by Fedora are configured automatically and you can install updates and additional software from those. However, if you want to set up additional repositories, for example ones containing your own software, some extra steps are needed.</p>
+<div class="paragraph">
+<p>For information about configuring additional software repositories, see the <em class="citetitle">Fedora System Administrator&#8217;s Guide</em>, available at <a href="https://docs.fedoraproject.org/" class="bare">https://docs.fedoraproject.org/</a>.</p>
+</div>
+</dd>
+<dt class="hdlist1">Install additional packages</dt>
+<dd>
+<p>You can control which packages will be installed by selecting an environment in the <code>Software Selection</code> dialog in the graphical installation (see <a href="Installing_Using_Anaconda.html#sect-installation-gui-software-selection" class="page">Software Selection</a>). This dialog does not provide a way to choose individual packages, only predefined sets. However, you can use the <strong class="application">DNF</strong> package manager to install additional packages after the installation. See the <em class="citetitle">Fedora System Administrator&#8217;s Guide</em>, available at <a href="https://docs.fedoraproject.org/" class="bare">https://docs.fedoraproject.org/</a>, for more information.</p>
+</dd>
+<dt class="hdlist1">Switch to a graphical login</dt>
+<dd>
+<p>Depending on the options you chose during the installation process, it is possible that your system does not have a graphical interface, instead offering only a text-based prompt. If this is the case and you wish to enable a graphical desktop after the installation, you must install the <strong class="application">X Window System</strong> and your preferred desktop environment (either <strong class="application">GNOME</strong> or <strong class="application">KDE</strong>).</p>
+<div class="paragraph">
+<p>As with all other software, these packages can be installed using the <strong class="application">DNF</strong> package manager. For information about using <strong class="application">DNF</strong> to install new packages, see the <em class="citetitle">Fedora System Administrator&#8217;s Guide</em>, available at <a href="https://docs.fedoraproject.org/" class="bare">https://docs.fedoraproject.org/</a>. For information on how to enable graphical login by default, see <a href="Troubleshooting.html#sect-trouble-after-graphical-login" class="page">Booting into a Graphical Environment</a>.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</article>
+<div id="contributing">
+    <p class="contribute">Want to help? <a href="https://docs.fedoraproject.org/en-US/fedora-docs/contributing/">Learn how to contribute to Fedora Docs.</a></p>
+</div>  </main>
+</div>
+<footer class="footer">
+  <p>All Fedora Documentation content available under <a href="http://creativecommons.org/licenses/by-sa/3.0/legalcode">CC-BY-SA 3.0</a> or, when specifically noted, under another <a href="https://fedoraproject.org/wiki/Licensing:Main">accepted</a> free and open content license.</p>
+  <p>Last build: </p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script src="../../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+  </body>
+</html>
