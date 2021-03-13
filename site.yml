@@ -1,0 +1,22 @@
+site:
+  title: Local Preview
+  start_page: fedora:install-guide:index
+content:
+  sources:
+   - url: .
+     branches: HEAD
+   - url: https://pagure.io/fedora-docs/release-docs-home.git
+     branches: master
+ui:
+  bundle:
+    url: https://github.com/Rasbats/opencpn_plugins_docs/raw/main/ui-bundle.zip
+    snapshot: true
+  default_layout: with_menu
+output:
+  clean: true
+  dir: ./public
+  destinations:
+  - provider: archive
+runtime:
+  pull: true
+  cache_dir: ./cache

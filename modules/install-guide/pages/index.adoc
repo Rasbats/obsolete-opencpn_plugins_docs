@@ -1,0 +1,18 @@
+
+:experimental:
+include::{partialsdir}/entities.adoc[]
+
+= Installation Guide
+
+Installing {PRODUCT}{nbsp}{PRODVER} 64-bit AMD and Intel
+
+[abstract]
+--
+
+This manual explains how to boot the Fedora installation program, [application]*Anaconda*, and how to install Fedora{nbsp}{PRODVER} on 32 and 64-bit AMD and Intel systems. It also covers advanced installation methods such as automated Kickstart installations, booting the installation from a network location, remote access to the installation system using VNC, and system upgrades from previous versions of Fedora. It also describes common post-installation tasks and explains how to troubleshoot common issues related to the installation.
+
+--
+image:title_logo.svg[Fedora Documentation Team]
+include::{partialsdir}/Legal_Notice.adoc[]
+
+include::{partialsdir}/Author_Group.adoc[]
