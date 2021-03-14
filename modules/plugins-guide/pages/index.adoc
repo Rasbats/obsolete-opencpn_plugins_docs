@@ -4,7 +4,6 @@ include::{partialsdir}/entities.adoc[]
 
 = Plugins Guide
 
-[abstract]
 --
 
 This manual describes the plugins available for OpenCPN.

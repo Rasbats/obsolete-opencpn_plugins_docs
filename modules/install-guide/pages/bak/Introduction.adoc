@@ -1,9 +1,0 @@
-
-:experimental:
-include::{partialsdir}/entities.adoc[]
-
-[[chap-introduction]]
-= Introduction
-
-This guide covers installation of Fedora, a Linux distribution built on free and open source software. This manual helps you install Fedora on desktops, laptops, and servers. The installation system is easy to use even if you lack previous knowledge of Linux or computer networks. If you select default options, Fedora provides a complete desktop operating system, including productivity applications, Internet utilities, and desktop tools.
-

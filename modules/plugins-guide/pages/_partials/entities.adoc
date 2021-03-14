@@ -1,7 +1,7 @@
 
-:BOOKID: install-guide
+:BOOKID: plugins-guide
 
-:BZURL: link:https://pagure.io/fedora-docs/install-guide/issues[https://pagure.io/]
+:BZURL: link:https://opencpn.org/[https://opencpn.org]
 
 :HOLDER: Red Hat, Inc. and others
 
