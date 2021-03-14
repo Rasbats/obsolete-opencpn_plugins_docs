@@ -1,5 +1,5 @@
 ---
 name: OpenCPN
-version: rawhide
+version: plugins
 # Navigation is in the main 'fedora' component:
 # https://pagure.io/fedora-docs/release-docs-home
